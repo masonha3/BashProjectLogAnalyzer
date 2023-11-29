@@ -62,4 +62,3 @@ echo "Modified: $mod"
 echo "Log Analysis Results:"
 count=$(awk -v pattern="$alerts" '$0 ~ pattern' "$filename" | grep -vE '^[[:space:]]*$' | sort | uniq -c | sort -nr)
 echo "$count"
-
